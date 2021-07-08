@@ -1,0 +1,164 @@
+@import "_nullstyle";
+
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+.header {
+	flex: 0 0 auto;
+		&__body {
+			border-bottom: 2px solid #f4f4f4;
+			padding: 25px 35px;
+		}
+
+		&__row {
+			display: flex;
+			justify-content: space-between;
+			align-items:center;
+		}
+
+		&__logo {
+			cursor: pointer;
+			position: relative;
+			&::before {
+				content: '';
+				background: url("/img/DUET130_50.png") 100%/cover no-repeat;
+				width: 90px;
+				position: absolute;
+				height: 31px;
+				top: 0;
+				left: 0;
+			}
+			p {
+				padding: 0 0 0 90px;
+				font-family: Calibri;
+				font-size: 30px;
+				letter-spacing: 0.01em;
+				color: #acacac;
+			}
+		}
+
+		&__user {
+			cursor: pointer;
+			position: relative;
+			&::before {
+				content: '';
+				width: 21px;
+				height: 21px;
+				top: 0;
+				left: 0;
+				position: absolute;
+				border-radius: 50%;
+				background: #bebebe;
+			}
+			p {
+				padding: 0 0 0 30px;
+				font-family: Calibri;
+				font-size: 18px;
+				letter-spacing: 0.01em;
+				color: #002e60;
+			}
+		}
+}
+.menu {
+
+	display: flex;
+	flex: 1 1 auto;
+
+		&__body {
+			flex: 1 1 auto;
+		}
+
+		&__row {
+			display: flex;
+			min-height: 100%;
+		}
+		&__columns {
+			padding: 40px 0 0 0;
+			background: #023976;
+			display: flex;
+			flex-direction: column;
+			&:hover {
+				.item {
+					width: 250px;
+				}
+			}
+		}
+		
+}
+.item {
+	overflow: hidden;
+	width: 80px;
+	transition-property: width;
+	transition-duration: 0.5s;
+		&__row {
+			display: flex;
+			cursor: pointer;
+			white-space: nowrap;
+			font-family: Calibri;
+			font-size: 24px;
+			letter-spacing: 0.01em;
+			position: relative;
+			a {
+				display: flex;
+				flex: 1 0 auto;
+				align-items: center;
+				padding: 25px;
+				color: #ffffff;
+				svg {
+					margin: 0 30px 0 0;
+				}
+			}
+		}
+
+		&__row:hover {
+			a {
+				padding: 12px;
+			}
+			span {
+				content: '';
+				background: #c9c7c7;
+				height: 60px;
+				width: 60px;
+				border-radius: 50%;
+				margin: 0 13px 0 0;
+				padding: 15px;
+
+			}
+			background: #002e60;
+		}
+
+
+}
+
+.frame {
+	display: flex;
+	flex: 1 1 auto;
+	&__item {
+		flex: 1 1 auto;
+	}
+}
+
+
+/* Laptops 1440px width */
+/* @media screen and (max-width:1440px) {
+} */
+
+/* Mini-Laptops 992px width */
+/* @media screen and (max-width:992px) {
+} */
+
+/* Talet 768px width */
+/* @media screen and (max-width:768px) {
+} */
+
+/* Smartphones 576px width */
+/* @media screen and (max-width:576px) {
+} */
+
+/* Mobile 340px width */
+/* @media screen and (max-width:340px) {
+} */
