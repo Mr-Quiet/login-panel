@@ -13,9 +13,9 @@ export const table_filter_init = () => {
             $rows.each(function (rowIndex) {
                 var valid = true;
                 $(this).find('td').each(function (colIndex) {
-                    if ($filters.eq(colIndex).find(input_type).val()) {
+                    if ($filters.eq(colIndex - 1).find(input_type).val()) {
                         if ($(this).html().toLowerCase().indexOf(
-                                $filters.eq(colIndex).find(input_type).val().toLowerCase()) == -1) {
+                                $filters.eq(colIndex - 1).find(input_type).val().toLowerCase()) == -1) {
                             valid = valid && false;
                         }
                     }
