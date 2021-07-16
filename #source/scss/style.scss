@@ -8,6 +8,16 @@
 }
 
 body {
+
+}
+
+.wrapper {
+	position: fixed;
+	overflow-y: scroll;
+	min-width: 100%;
+	max-height: 100%;
+	display: flex;
+	flex-direction: column;
 	&::-webkit-scrollbar {
 		width: 10px;
 		height: 13px;
@@ -29,14 +39,12 @@ body {
 	}
 }
 
-.wrapper {
-	min-height: 100%;
-	display: flex;
-	flex-direction: column;
-}
-
 .header {
 	flex: 0 0 auto;
+	position: sticky;
+	top: 0px;
+	background: #fff;
+	z-index: 1;
 
 	&__body {
 		border-bottom: 2px solid #f4f4f4;
@@ -119,9 +127,11 @@ body {
 
 		&__columns {
 			padding: 40px 0 0 0;
-			background: #023976;;
+			background: #023976;
+			;
 			display: flex;
 			flex-direction: column;
+
 			&:hover {
 				.item {
 					max-width: 250px;
@@ -134,10 +144,11 @@ body {
 .item {
 	overflow: hidden;
 	position: sticky;
-	top: 40px;
+	top: 127px;
 	max-width: 80px;
 	transition-property: max-width;
 	transition-duration: 0.5s;
+
 	&__row {
 		display: flex;
 		white-space: nowrap;
@@ -323,6 +334,9 @@ body {
 
 			input,
 			select {
+				outline: none;
+				border: none;
+				-webkit-appearance: none;
 				width: 100%;
 				overflow: hidden;
 				max-width: 100%;
@@ -418,6 +432,8 @@ body {
 }
 
 .modal-window {
+	padding: 0 15px;
+	z-index: 2;
 	position: fixed;
 	width: 100%;
 	height: 100%;

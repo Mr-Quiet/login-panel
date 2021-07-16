@@ -2,17 +2,17 @@
 <html lang="ru">
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="/login-panel/css/style.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+	<link rel="stylesheet" href="/css/style.css" />
 	<title>DUET - Адмін панель</title>
 </head>
 <body>
-	<div id="wrapperID" class="wrapper">
-		<header class="header">
+	<div class="wrapper">
+		<header id="header" class="header">
 			<div class="header__body">
 				<div class="header__row">
 					<div class="header__logo">
-						<p><img src="/login-panel/img/DUET130_50.png" width="90" alt="">- Адмін панель</p>
+						<p><img src="/img/DUET130_50.png" width="90" alt="">- Адмін панель</p>
 					</div>
 					<div class="header__user">
 						<p>Serhii Hushko <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -491,7 +491,7 @@
 		<div class="form__content">
 			<div class="form__header">
 				<p>Редагування</p>
-				<a href="#" class="form__close-modal">&times;</a>
+				<a href="#header" class="form__close-modal">&times;</a>
 			</div>
 			<div class="form__body">
 				<p>ID: <span data-record-id>2ly235liv25</span></p>
@@ -555,7 +555,7 @@
 		<div class="form__content">
 			<div class="form__header">
 				<p>Додати</p>
-				<a href="#" class="form__close-modal">&times;</a>
+				<a href="#header" class="form__close-modal">&times;</a>
 			</div>
 			<div class="form__body">
 				<form method="post" action="#">
