@@ -59,13 +59,13 @@ body {
 
 	&__logo {
 		cursor: default;
-
+		display: flex;
 		p {
 			display: flex;
 			justify-content: center;
+			align-items: center;
 			font-family: "Calibri";
 			font-size: 24px;
-			line-height: 1.4;
 			color: #acacac;
 		}
 	}
@@ -82,7 +82,7 @@ body {
 			left: 0;
 			position: absolute;
 			border-radius: 50%;
-			background: url("/login-panel/img/users/user.png") 100%/COVER no-repeat;
+			background: url("/img/users/user.png") 100%/COVER no-repeat;
 		}
 
 		p {
@@ -97,6 +97,33 @@ body {
 				margin: 0 0 0 10px;
 				width: 20px;
 				fill: #002e60;
+			}
+		}
+	}
+	&__burger {
+		display: none;
+	
+	}
+	@media screen and (max-width: 992px) {
+		&__body {
+			padding: 15px 35px;
+		}
+		&__logo {
+			p {
+				font-size: 18px;
+			}
+		}
+		&__user {
+			display: none;
+		}
+		&__burger {
+			display: block;
+		}
+	}
+	@media screen and (max-width: 425px) {
+		&__logo {
+			p {
+				display: none;
 			}
 		}
 	}
@@ -137,6 +164,11 @@ body {
 					max-width: 250px;
 				}
 			}
+		}
+	}
+	@media screen and (max-width: 992px) {
+		&__columns {
+			display: none;
 		}
 	}
 }
@@ -203,7 +235,9 @@ body {
 		display: flex;
 		flex-direction: column;
 	}
-
+	@media screen and (max-width: 992px) {
+		padding: 20px 15px;
+	}
 }
 
 .btn {
@@ -219,7 +253,9 @@ body {
 	&__column {
 		flex: 1 1 33.33333%;
 		padding: 0 10px;
-
+		&:first-child {
+			
+		}
 		&:nth-child(2) .btn__item {
 			background-color: #39c;
 
@@ -249,23 +285,24 @@ body {
 		display: flex;
 		box-shadow: 0 0 0 1px #d0d0d0;
 		border-radius: 10px;
-
+		justify-content: space-between;
+		align-items: stretch;
+		flex-wrap: nowrap;
 		a {
+			display: flex;	
 			white-space: nowrap;
-			flex: 1 1 auto;
-			padding: 25px;
+			justify-content: space-between;
+			align-items: center;
+			padding: 17.5px;
 			font-family: "Calibri";
 			font-size: 30px;
 			color: #000;
 			position: relative;
-
+			width: 100%;
 			span {
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				position: absolute;
-				top: 18px;
-				right: 25px;
 				width: 45px;
 				height: 45px;
 				border-radius: 50%;
@@ -278,6 +315,7 @@ body {
 		}
 
 		p {
+			height: 100%;
 			font-family: "Calibri";
 			font-size: 30px;
 			padding: 25px;
@@ -285,11 +323,47 @@ body {
 			color: #023976;
 		}
 	}
+	@media screen and (max-width: 992px) {
+		&__row {
+			flex-wrap: wrap;
+			margin: 0 0 0 -15px;
+		}
+		&__column {
+			flex: 1 0 50%;
+			margin: 0 0 15px 0;
+			padding: 0 0 0 15px;
+			&:first-child {
+				flex: 1 0 100%;
+			}
+		}
+		&__item a {
+			padding: 12px;
+			font-size: 24px;
+			// line-height: 1;
+			span {
+				top: 50;
+				width: 40px;
+				height: 40px;
+				svg {
+					width: 20px;
+				}
+			}
+		}
+		p {
+			padding: 20px;
+			font-size: 24px;
+		}
+	}
+	@media screen and (max-width: 600px) {
+		&__column {
+			flex: 1 0 100%;
+		}
+	}
 }
 
 .table {
 	display: flex;
-
+	
 	&__body {
 		text-align: center;
 		flex: 1 1 auto;
@@ -334,6 +408,8 @@ body {
 
 			input,
 			select {
+				// -webkit-appearance: none;
+				// appearance: none;
 				background: #fff;
 				width: 100%;
 				overflow: hidden;
@@ -422,6 +498,9 @@ body {
 			max-width: 100%;
 			width: 100%;
 		}
+	}
+	@media screen and (max-width: 992px) {
+		 display: none;
 	}
 }
 
@@ -550,6 +629,8 @@ body {
 
 		input,
 		select {
+			// -webkit-appearance: none;
+			// appearance: none;
 			width: 100%;
 			border-radius: 3px;
 			padding: 15px;

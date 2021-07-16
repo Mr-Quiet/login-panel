@@ -199,6 +199,9 @@ table {
 
 .header__logo {
   cursor: default;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .header__logo p {
@@ -208,9 +211,11 @@ table {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: "Calibri";
   font-size: 24px;
-  line-height: 1.4;
   color: #acacac;
 }
 
@@ -227,7 +232,7 @@ table {
   left: 0;
   position: absolute;
   border-radius: 50%;
-  background: url("/login-panel/img/users/user.png") 100%/COVER no-repeat;
+  background: url("/img/users/user.png") 100%/COVER no-repeat;
 }
 
 .header__user p {
@@ -247,6 +252,31 @@ table {
   margin: 0 0 0 10px;
   width: 20px;
   fill: #002e60;
+}
+
+.header__burger {
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+  .header__body {
+    padding: 15px 35px;
+  }
+  .header__logo p {
+    font-size: 18px;
+  }
+  .header__user {
+    display: none;
+  }
+  .header__burger {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .header__logo p {
+    display: none;
+  }
 }
 
 .menu {
@@ -301,6 +331,12 @@ table {
 
 .menu__columns__columns:hover .item {
   max-width: 250px;
+}
+
+@media screen and (max-width: 992px) {
+  .menu__columns {
+    display: none;
+  }
 }
 
 .item {
@@ -391,6 +427,12 @@ table {
           flex-direction: column;
 }
 
+@media screen and (max-width: 992px) {
+  .content {
+    padding: 20px 15px;
+  }
+}
+
 .btn {
   margin: 0 0 20px 0;
 }
@@ -445,18 +487,33 @@ table {
   -webkit-box-shadow: 0 0 0 1px #d0d0d0;
           box-shadow: 0 0 0 1px #d0d0d0;
   border-radius: 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .btn__item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   white-space: nowrap;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  padding: 25px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 17.5px;
   font-family: "Calibri";
   font-size: 30px;
   color: #000;
   position: relative;
+  width: 100%;
 }
 
 .btn__item a span {
@@ -469,9 +526,6 @@ table {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
-  top: 18px;
-  right: 25px;
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -483,11 +537,56 @@ table {
 }
 
 .btn__item p {
+  height: 100%;
   font-family: "Calibri";
   font-size: 30px;
   padding: 25px;
   font-weight: 700;
   color: #023976;
+}
+
+@media screen and (max-width: 992px) {
+  .btn__row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0 0 0 -15px;
+  }
+  .btn__column {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 50%;
+            flex: 1 0 50%;
+    margin: 0 0 15px 0;
+    padding: 0 0 0 15px;
+  }
+  .btn__column:first-child {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+  }
+  .btn__item a {
+    padding: 12px;
+    font-size: 24px;
+  }
+  .btn__item a span {
+    top: 50;
+    width: 40px;
+    height: 40px;
+  }
+  .btn__item a span svg {
+    width: 20px;
+  }
+  .btn p {
+    padding: 20px;
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .btn__column {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+  }
 }
 
 .table {
@@ -634,6 +733,12 @@ table {
   width: 100%;
 }
 
+@media screen and (max-width: 992px) {
+  .table {
+    display: none;
+  }
+}
+
 .modal-window {
   padding: 0 15px;
   z-index: 2;
@@ -776,7 +881,6 @@ table {
   background: #e6e6e6;
   font-family: "Calibri";
   font-size: 16px;
-  background: #fff;
 }
 
 .form__close-modal {
