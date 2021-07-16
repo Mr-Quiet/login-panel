@@ -930,6 +930,12 @@ table {
   padding: 13px;
 }
 
+@media screen and (max-width: 992px) {
+  .form__elements-group-2 fieldset input[type=date] {
+    padding: 14px;
+  }
+}
+
 .form__actions {
   display: -webkit-box;
   display: -ms-flexbox;

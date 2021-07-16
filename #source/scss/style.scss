@@ -672,6 +672,10 @@ body {
 
 			input[type=date] {
 				padding: 13px;
+				@media screen and (max-width: 992px) {
+					padding: 14px;
+					
+				}
 			}
 		}
 
