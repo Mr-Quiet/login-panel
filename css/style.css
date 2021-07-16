@@ -135,10 +135,6 @@ table {
 }
 
 .wrapper {
-  position: fixed;
-  overflow-y: scroll;
-  min-width: 100%;
-  max-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -227,7 +223,7 @@ table {
   left: 0;
   position: absolute;
   border-radius: 50%;
-  background: url("/img/users/user.png") 100%/COVER no-repeat;
+  background: url("/login-panel/img/users/user.png") 100%/COVER no-repeat;
 }
 
 .header__user p {
@@ -548,9 +544,6 @@ table {
 
 .table__body tr input,
 .table__body tr select {
-  outline: none;
-  border: none;
-  -webkit-appearance: none;
   width: 100%;
   overflow: hidden;
   max-width: 100%;
@@ -562,6 +555,9 @@ table {
 
 .table__body tr input option,
 .table__body tr select option {
+  outline: none;
+  border: none;
+  -webkit-appearance: none;
   color: #000;
 }
 
