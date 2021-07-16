@@ -1,7 +1,7 @@
 @import "_nullstyle";
 
 @font-face {
-	font-family: Calibri;
+	font-family: "Calibri";
 	src: url(../fonts/CALIBRI.woff) format("woff"), url(../fonts/CALIBRI.woff2) format("woff2"), url(../fonts/CALIBRI.ttf) format("truetype"), url(../fonts/CALIBRI.otf) format("OpenType");
 	font-weight: 400;
 	font-style: normal;
@@ -152,7 +152,7 @@ body {
 	&__row {
 		display: flex;
 		white-space: nowrap;
-		font-family: Calibri;
+		font-family: "Calibri";
 		font-size: 24px;
 
 		a {
@@ -254,7 +254,7 @@ body {
 			white-space: nowrap;
 			flex: 1 1 auto;
 			padding: 25px;
-			font-family: Calibri;
+			font-family: "Calibri";
 			font-size: 30px;
 			color: #000;
 			position: relative;
@@ -278,7 +278,7 @@ body {
 		}
 
 		p {
-			font-family: Calibri;
+			font-family: "Calibri";
 			font-size: 30px;
 			padding: 25px;
 			font-weight: 700;
@@ -310,7 +310,7 @@ body {
 				text-overflow: ellipsis;
 				background-color: #00608c;
 				color: #ddeaf0;
-				font-family: Calibri;
+				font-family: "Calibri";
 				font-size: 20px;
 			}
 
@@ -320,7 +320,7 @@ body {
 				flex: 1 1 auto;
 				width: 100%;
 				padding: 15px;
-				font-family: Calibri;
+				font-family: "Calibri";
 				font-size: 16px;
 				color: #000;
 				overflow: hidden;
@@ -339,14 +339,10 @@ body {
 				max-width: 100%;
 				padding: 5px;
 				border-radius: 3px;
-				font-family: Calibri;
+				font-family: "Calibri";
 				font-size: 20px;
 			}
 
-			input option,
-			select option {
-				color: #000;
-			}
 
 			input {
 

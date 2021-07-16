@@ -128,7 +128,7 @@ table {
 }
 
 @font-face {
-  font-family: Calibri;
+  font-family: "Calibri";
   src: url(../fonts/CALIBRI.woff) format("woff"), url(../fonts/CALIBRI.woff2) format("woff2"), url(../fonts/CALIBRI.ttf) format("truetype"), url(../fonts/CALIBRI.otf) format("OpenType");
   font-weight: 400;
   font-style: normal;
@@ -320,7 +320,7 @@ table {
   display: -ms-flexbox;
   display: flex;
   white-space: nowrap;
-  font-family: Calibri;
+  font-family: "Calibri";
   font-size: 24px;
 }
 
@@ -453,7 +453,7 @@ table {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   padding: 25px;
-  font-family: Calibri;
+  font-family: "Calibri";
   font-size: 30px;
   color: #000;
   position: relative;
@@ -483,7 +483,7 @@ table {
 }
 
 .btn__item p {
-  font-family: Calibri;
+  font-family: "Calibri";
   font-size: 30px;
   padding: 25px;
   font-weight: 700;
@@ -522,7 +522,7 @@ table {
   text-overflow: ellipsis;
   background-color: #00608c;
   color: #ddeaf0;
-  font-family: Calibri;
+  font-family: "Calibri";
   font-size: 20px;
 }
 
@@ -534,7 +534,7 @@ table {
           flex: 1 1 auto;
   width: 100%;
   padding: 15px;
-  font-family: Calibri;
+  font-family: "Calibri";
   font-size: 16px;
   color: #000;
   overflow: hidden;
@@ -553,13 +553,8 @@ table {
   max-width: 100%;
   padding: 5px;
   border-radius: 3px;
-  font-family: Calibri;
+  font-family: "Calibri";
   font-size: 20px;
-}
-
-.table__body tr input option,
-.table__body tr select option {
-  color: #000;
 }
 
 .table__body tr input::-webkit-input-placeholder {
