@@ -1,14 +1,16 @@
 @import "_nullstyle";
 
 @font-face {
-	font-family: "Calibri";
-	src: url(../fonts/CALIBRI.woff) format("woff"), url(../fonts/CALIBRI.woff2) format("woff2"), url(../fonts/CALIBRI.ttf) format("truetype"), url(../fonts/CALIBRI.otf) format("OpenType");
+	src: url("../fonts/CALIBRI.woff") format("woff"),
+		url("../fonts/CALIBRI.woff2") format("woff2"),
+		url("../fonts/CALIBRI.ttf") format("truetype"),
+		url("../fonts/CALIBRI.otf") format("OpenType");
 	font-weight: 400;
 	font-style: normal;
 }
 
-body {
-
+:root {
+	font-family: "Calibri";
 }
 
 .wrapper {
@@ -18,6 +20,7 @@ body {
 	height: 100%;
 	display: flex;
 	flex-direction: column;
+
 	&::-webkit-scrollbar {
 		width: 10px;
 		height: 13px;
@@ -60,11 +63,11 @@ body {
 	&__logo {
 		cursor: default;
 		display: flex;
+
 		p {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			font-family: "Calibri";
 			font-size: 24px;
 			color: #acacac;
 		}
@@ -89,7 +92,6 @@ body {
 			display: flex;
 			align-items: center;
 			padding: 0 0 0 30px;
-			font-family: "Calibri";
 			font-size: 18px;
 			color: #002e60;
 
@@ -100,26 +102,166 @@ body {
 			}
 		}
 	}
+
 	&__burger {
 		display: none;
-	
+		background: #e6e6e6;
+		border-radius: 3px;
+		position: relative;
+		width: 60px;
+		height: 44px;
+
+		&::before,
+		&::after {
+			content: '';
+			background: #a0a0a0;
+			position: absolute;
+			width: 30px;
+			height: 2px;
+			left: 50%;
+			transform: translateX(-50%);
+			transition: all 0.3s ease 0s;
+		}
+
+		&::before {
+			top: 15px;
+		}
+
+		&:after {
+			bottom: 13px;
+		}
+
+		span {
+			position: absolute;
+			background: #a0a0a0;
+			width: 30px;
+			height: 2px;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%) rotate(0deg);
+			transition: all 0.3s ease 0s;
+		}
+
+		&.active {
+			&:before {
+				transform: translate(-50%) rotate(45deg);
+				top: 50%;
+			}
+
+			&::after {
+				transform: translate(-50%) rotate(-45deg);
+				top: 50%;
+			}
+
+			& span {
+				transform: scale(0);
+			}
+		}
 	}
+
+	&__menu {
+		position: fixed;
+		z-index: 999;
+		top: 76px;
+		right: -100%;
+		display: none;
+		background: #023976;
+		bottom: 0;
+		max-width: 320px;
+		width: 100%;
+		transition: all 0.3s ease 0s;
+
+		&.active {
+			right: 0;
+		}
+	}
+
+	&__user-mobile {
+
+		margin: 20px 0 20px 0;
+		display: flex;
+		justify-content: center;
+		position: relative;
+
+		&::before {
+			content: '';
+			width: 21px;
+			height: 21px;
+			top: 0;
+			left: 20px;
+			position: relative;
+			border-radius: 50%;
+			background: url("/img/users/user.png") 100%/COVER no-repeat;
+		}
+
+		p {
+			display: flex;
+			align-items: center;
+			padding: 0 0 0 30px;
+			font-size: 18px;
+			color: #fff;
+
+			svg {
+				margin: 0 0 0 10px;
+				width: 20px;
+				fill: #fff;
+			}
+		}
+	}
+
+	&__list li {}
+
+	&__link {
+		display: flex;
+		white-space: nowrap;
+		font-size: 24px;
+
+		a {
+			display: flex;
+			flex: 1 0 auto;
+			align-items: center;
+			padding: 10px;
+			color: #fff;
+
+			span {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 50px;
+				height: 50px;
+				margin: 0 20px 0 0;
+
+				svg {
+					fill: #fff;
+				}
+			}
+		}
+	}
+
 	@media screen and (max-width: 992px) {
 		&__body {
 			padding: 15px 35px;
 		}
+
 		&__logo {
 			p {
 				font-size: 18px;
 			}
 		}
+
 		&__user {
 			display: none;
 		}
+
 		&__burger {
 			display: block;
 		}
+
+		&__menu {
+			display: block;
+		}
 	}
+
 	@media screen and (max-width: 425px) {
 		&__logo {
 			p {
@@ -166,6 +308,7 @@ body {
 			}
 		}
 	}
+
 	@media screen and (max-width: 992px) {
 		&__columns {
 			display: none;
@@ -184,7 +327,6 @@ body {
 	&__row {
 		display: flex;
 		white-space: nowrap;
-		font-family: "Calibri";
 		font-size: 24px;
 
 		a {
@@ -235,6 +377,7 @@ body {
 		display: flex;
 		flex-direction: column;
 	}
+
 	@media screen and (max-width: 992px) {
 		padding: 20px 15px;
 	}
@@ -253,9 +396,9 @@ body {
 	&__column {
 		flex: 1 1 33.33333%;
 		padding: 0 10px;
-		&:first-child {
-			
-		}
+
+		&:first-child {}
+
 		&:nth-child(2) .btn__item {
 			background-color: #39c;
 
@@ -288,17 +431,18 @@ body {
 		justify-content: space-between;
 		align-items: stretch;
 		flex-wrap: nowrap;
+
 		a {
-			display: flex;	
+			display: flex;
 			white-space: nowrap;
 			justify-content: space-between;
 			align-items: center;
 			padding: 17.5px;
-			font-family: "Calibri";
 			font-size: 30px;
 			color: #000;
 			position: relative;
 			width: 100%;
+
 			span {
 				display: flex;
 				justify-content: center;
@@ -316,44 +460,83 @@ body {
 
 		p {
 			height: 100%;
-			font-family: "Calibri";
 			font-size: 30px;
 			padding: 25px;
 			font-weight: 700;
 			color: #023976;
 		}
 	}
+
+	&__smart-search {
+		display: none;
+		margin: 25px 0;
+
+		h4 {
+			font-size: 30px;
+			line-height: 25px;
+			font-weight: 700;
+			color: #023976;
+			margin-bottom: 15px;
+		}
+
+		input {
+			width: 100%;
+			padding: 15px;
+			background-color: #ededed;
+			border-radius: 8px;
+			font-size: 18px;
+
+			&::placeholder {
+				font-size: 18px;
+				line-height: 25px;
+			}
+		}
+
+		@media screen and (max-width:992px) {
+			display: block;
+
+		}
+	}
+
+
 	@media screen and (max-width: 992px) {
 		&__row {
 			flex-wrap: wrap;
 			margin: 0 0 0 -15px;
 		}
+
 		&__column {
 			flex: 1 0 50%;
 			margin: 0 0 15px 0;
 			padding: 0 0 0 15px;
+
 			&:first-child {
 				flex: 1 0 100%;
 			}
 		}
+
 		&__item a {
 			padding: 12px;
 			font-size: 24px;
+
 			// line-height: 1;
 			span {
 				top: 50;
 				width: 40px;
 				height: 40px;
+
 				svg {
 					width: 20px;
 				}
 			}
 		}
+
 		p {
 			padding: 20px;
 			font-size: 24px;
 		}
 	}
+
 	@media screen and (max-width: 600px) {
 		&__column {
 			flex: 1 0 100%;
@@ -363,7 +546,7 @@ body {
 
 .table {
 	display: flex;
-	
+
 	&__body {
 		text-align: center;
 		flex: 1 1 auto;
@@ -384,7 +567,6 @@ body {
 				text-overflow: ellipsis;
 				background-color: #00608c;
 				color: #ddeaf0;
-				font-family: "Calibri";
 				font-size: 20px;
 			}
 
@@ -394,7 +576,6 @@ body {
 				flex: 1 1 auto;
 				width: 100%;
 				padding: 15px;
-				font-family: "Calibri";
 				font-size: 16px;
 				color: #000;
 				overflow: hidden;
@@ -416,7 +597,6 @@ body {
 				max-width: 100%;
 				padding: 5px;
 				border-radius: 3px;
-				font-family: "Calibri";
 				font-size: 20px;
 			}
 
@@ -499,10 +679,88 @@ body {
 			width: 100%;
 		}
 	}
+
 	@media screen and (max-width: 992px) {
-		 display: none;
+		display: none;
 	}
 }
+
+.cards-container {
+	display: none;
+	overflow-x: auto;
+	max-width:calc(100vw - 40px);
+	box-shadow:inset -22px -2px 26px -15px rgba(black, .25);
+	padding: 15px;
+	border-radius: 5px;
+	&::-webkit-scrollbar {
+		height: 3px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: #002e60;
+		border-radius: 3px;
+
+		&:hover {
+			background: #004693;
+		}
+	}
+
+	&::-webkit-scrollbar-track {
+		background: #fff;
+		border-radius: 3px;
+		box-shadow: inset 7px 10px 12px 0 #f0f0f0;
+	}
+	.card {
+		max-width:320px;
+		min-width: 250px;
+		box-shadow: 0 0 0 1px lightgrey;
+		padding: 15px;
+		margin-left: 15px;
+		border-radius: 5px;
+		&:first-child {
+			margin-left: 0;
+		}
+
+
+		p {
+			line-height: 1.5;
+			font-weight: 700;
+
+			span,
+			a {
+				color: #023976;
+				font-weight: normal;
+			}
+
+			a {
+				word-break: break-all;
+				text-decoration: underline;
+			}
+		}
+
+		&__header {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 5px 0 20px 0;
+
+			img {
+				border-radius: 50%;
+			}
+		}
+
+		&__body {}
+
+	}
+	@media screen and (max-width: 992px) {
+		display: flex;
+	}
+
+	
+}
+
+
+
 
 .modal-window {
 	padding: 0 15px;
@@ -590,7 +848,6 @@ body {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		font-family: "Calibri";
 
 		p {
 			font-size: 24px;
@@ -604,7 +861,6 @@ body {
 
 		p {
 			padding: 15px 0;
-			font-family: "Calibri";
 			font-size: 18px;
 			font-weight: 700;
 			border-bottom: 1px solid rgba(222, 222, 222, 0.53);
@@ -619,7 +875,6 @@ body {
 			margin: 5px 0;
 
 			legend {
-				font-family: "Calibri";
 				font-size: 20px;
 				font-weight: 700;
 				padding: 10px 0;
@@ -635,7 +890,6 @@ body {
 			border-radius: 3px;
 			padding: 15px;
 			background: #e6e6e6;
-			font-family: "Calibri";
 			font-size: 16px;
 		}
 	}
@@ -671,11 +925,7 @@ body {
 			flex: 0 1 50%;
 
 			input[type=date] {
-				padding: 13px;
-				@media screen and (max-width: 992px) {
-					padding: 14px;
-					
-				}
+				padding: 13.43px;
 			}
 		}
 
@@ -693,7 +943,6 @@ body {
 			border-radius: 3px;
 			padding: 10px;
 
-			font-family: "Calibri";
 			font-size: 20px;
 			font-weight: 700;
 			color: #ffffff;
