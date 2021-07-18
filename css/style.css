@@ -128,7 +128,6 @@ table {
 }
 
 @font-face {
-  font-family: "Calibri";
   src: url("../fonts/CALIBRI.woff") format("woff"), url("../fonts/CALIBRI.woff2") format("woff2"), url("../fonts/CALIBRI.ttf") format("truetype"), url("../fonts/CALIBRI.otf") format("OpenType");
   font-weight: 400;
   font-style: normal;
