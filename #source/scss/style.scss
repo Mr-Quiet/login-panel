@@ -52,6 +52,7 @@
 	&__body {
 		border-bottom: 2px solid #f4f4f4;
 		padding: 25px 35px;
+		
 	}
 
 	&__row {
@@ -240,7 +241,7 @@
 
 	@media screen and (max-width: 992px) {
 		&__body {
-			padding: 15px 35px;
+			padding: 15px;
 		}
 
 		&__logo {
@@ -715,6 +716,7 @@
 		min-width: 250px;
 		box-shadow: 0 0 0 1px lightgrey;
 		padding: 15px;
+		margin-top: 20px;
 		margin-left: 15px;
 		border-radius: 5px;
 		&:first-child {
@@ -743,7 +745,25 @@
 			justify-content: center;
 			align-items: center;
 			margin: 5px 0 20px 0;
+			position: relative;
+			a {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				top: -45px;
+				width: 35px;
+				height: 35px;
+				background: #39c;
+				border-radius: 3px;
 
+				svg {
+					max-width: 17px;
+					height: 100%;
+				}
+			}
 			img {
 				border-radius: 50%;
 			}
