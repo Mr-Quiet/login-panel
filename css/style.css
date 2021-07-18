@@ -138,28 +138,9 @@ table {
   font-family: "Calibri";
 }
 
-body::-webkit-scrollbar {
-  width: 10px;
-  height: 13px;
-}
-
-body::-webkit-scrollbar-thumb {
-  background: #002e60;
-  border-radius: 3px;
-}
-
-body::-webkit-scrollbar-thumb:hover {
-  background: #004693;
-}
-
-body::-webkit-scrollbar-track {
-  background: #fff;
-  border-radius: 3px;
-  -webkit-box-shadow: inset 7px 10px 12px 0 #f0f0f0;
-          box-shadow: inset 7px 10px 12px 0 #f0f0f0;
-}
-
 .wrapper {
+  position: fixed;
+  overflow-y: auto;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -168,7 +149,27 @@ body::-webkit-scrollbar-track {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  overflow-x: hidden;
+}
+
+.wrapper::-webkit-scrollbar {
+  width: 10px;
+  height: 13px;
+}
+
+.wrapper::-webkit-scrollbar-thumb {
+  background: #002e60;
+  border-radius: 3px;
+}
+
+.wrapper::-webkit-scrollbar-thumb:hover {
+  background: #004693;
+}
+
+.wrapper::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 7px 10px 12px 0 #f0f0f0;
+          box-shadow: inset 7px 10px 12px 0 #f0f0f0;
 }
 
 .header {
@@ -414,6 +415,19 @@ body::-webkit-scrollbar-track {
   fill: #fff;
 }
 
+.header__link.active a {
+  background: #002e60;
+}
+
+.header__link.active a span {
+  background: #fff;
+  border-radius: 30px;
+}
+
+.header__link.active a span svg {
+  fill: #002e60;
+}
+
 @media screen and (max-width: 992px) {
   .header__body {
     padding: 15px;
@@ -551,16 +565,16 @@ body::-webkit-scrollbar-track {
   fill: #fff;
 }
 
-.item__row_active a {
+.item__row.active a {
   background: #002e60;
 }
 
-.item__row_active a span {
+.item__row.active a span {
   background: #fff;
   border-radius: 30px;
 }
 
-.item__row_active a span svg {
+.item__row.active a span svg {
   fill: #002e60;
 }
 

@@ -12,10 +12,15 @@
 
 :root {
 	font-family: "Calibri";
-
 }
 
-body {
+.wrapper {
+	position: fixed;
+	overflow-y: auto;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+
 	&::-webkit-scrollbar {
 		width: 10px;
 		height: 13px;
@@ -35,13 +40,6 @@ body {
 		border-radius: 3px;
 		box-shadow: inset 7px 10px 12px 0 #f0f0f0;
 	}
-}
-
-.wrapper {
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	overflow-x: hidden;
 }
 
 .header {
@@ -238,6 +236,19 @@ body {
 				}
 			}
 		}
+
+		&.active a {
+			background: #002e60;
+
+			span {
+				background: #fff;
+				border-radius: 30px;
+
+				svg {
+					fill: #002e60;
+				}
+			}
+		}
 	}
 
 	@media screen and (max-width: 992px) {
@@ -351,17 +362,17 @@ body {
 				}
 			}
 		}
-	}
 
-	&__row_active a {
-		background: #002e60;
+		&.active a {
+			background: #002e60;
 
-		span {
-			background: #fff;
-			border-radius: 30px;
+			span {
+				background: #fff;
+				border-radius: 30px;
 
-			svg {
-				fill: #002e60;
+				svg {
+					fill: #002e60;
+				}
 			}
 		}
 	}
