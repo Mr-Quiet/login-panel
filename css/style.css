@@ -416,7 +416,7 @@ table {
 
 @media screen and (max-width: 992px) {
   .header__body {
-    padding: 15px 35px;
+    padding: 15px;
   }
   .header__logo p {
     font-size: 18px;
