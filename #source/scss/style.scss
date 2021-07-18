@@ -1,6 +1,7 @@
 @import "_nullstyle";
 
 @font-face {
+	font-family: "Calibri";
 	src: url("../fonts/CALIBRI.woff") format("woff"),
 		url("../fonts/CALIBRI.woff2") format("woff2"),
 		url("../fonts/CALIBRI.ttf") format("truetype"),
@@ -210,8 +211,6 @@
 		}
 	}
 
-	&__list li {}
-
 	&__link {
 		display: flex;
 		white-space: nowrap;
@@ -397,8 +396,6 @@
 	&__column {
 		flex: 1 1 33.33333%;
 		padding: 0 10px;
-
-		&:first-child {}
 
 		&:nth-child(2) .btn__item {
 			background-color: #39c;
@@ -768,8 +765,6 @@
 				border-radius: 50%;
 			}
 		}
-
-		&__body {}
 
 	}
 	@media screen and (max-width: 992px) {
