@@ -1217,7 +1217,6 @@ table {
   }
   .form__body fieldset legend {
     font-size: 16px;
-    padding: 5px 0;
   }
 }
 
@@ -1309,6 +1308,7 @@ table {
 @media screen and (max-width: 992px) {
   .form__elements-group-2 fieldset input[type=date] {
     padding: 9px;
+    width: 100%;
   }
 }
 
