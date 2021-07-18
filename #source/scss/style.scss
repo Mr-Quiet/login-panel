@@ -601,8 +601,8 @@
 
 			input,
 			select {
-				// -webkit-appearance: none;
-				// appearance: none;
+				-webkit-appearance: none;
+				appearance: none;
 				background: #fff;
 				width: 100%;
 				overflow: hidden;
@@ -932,8 +932,8 @@
 
 		input,
 		select {
-			// -webkit-appearance: none;
-			// appearance: none;
+			-webkit-appearance: none;
+			appearance: none;
 			width: 100%;
 			border-radius: 3px;
 			padding: 15px;
