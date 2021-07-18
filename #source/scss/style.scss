@@ -603,7 +603,6 @@
 			select {
 				-webkit-appearance: none;
 				appearance: none;
-				background: #fff;
 				width: 100%;
 				overflow: hidden;
 				max-width: 100%;
@@ -611,7 +610,9 @@
 				border-radius: 3px;
 				font-size: 20px;
 			}
-
+			select {
+				background: url("/login-panel/img/icons/down-arrow.png") 95%/18px no-repeat #fff;
+			}
 
 			input {
 
@@ -889,8 +890,9 @@
 			font-weight: 700;
 			color: #ffffff;
 		}
+
 		@media screen and (max-width: 992px) {
-			p{
+			p {
 				font-size: 20px;
 			}
 		}
@@ -909,6 +911,7 @@
 				font-size: 16px;
 				font-weight: 400;
 			}
+
 			@media screen and (max-width: 992px) {
 				padding: 10px 0;
 			}
@@ -923,8 +926,10 @@
 				padding: 10px 0;
 				color: #000000;
 			}
+
 			@media screen and (max-width: 992px) {
 				margin: 0;
+
 				legend {
 					font-size: 16px;
 				}
@@ -940,9 +945,13 @@
 			padding: 15px;
 			background: #e6e6e6;
 			font-size: 16px;
+		
 			@media screen and (max-width: 992px) {
 				padding: 10px;
 			}
+		}
+		select {
+			background: url("/login-panel/img/icons/down-arrow.png") 91%/16px no-repeat #e6e6e6;
 		}
 	}
 
@@ -969,10 +978,12 @@
 			padding: 0 5px;
 			flex: 0 1 25%;
 		}
+
 		@media screen and (max-width: 992px) {
 			flex-wrap: wrap;
+
 			fieldset {
-				
+
 				flex: 0 1 50%;
 			}
 		}
@@ -985,17 +996,24 @@
 		fieldset {
 			padding: 0 5px;
 			flex: 0 1 50%;
-
+			::-webkit-calendar-picker-indicator { 
+				-webkit-appearance: none;
+				appearance: none;
+				background: url("/login-panel/img/icons/calendar.png") 90%/16px no-repeat;
+			}
 			input[type=date] {
-				padding: 13.43px;
+			
+				padding: 13.2px;
 				@media screen and (max-width: 992px) {
 					padding: 9px;
 					width: 100%;
 				}
 			}
 		}
+
 		@media screen and (max-width: 992px) {
 			flex-wrap: wrap;
+
 			fieldset {
 				flex: 0 1 100%;
 			}
@@ -1017,9 +1035,11 @@
 			font-weight: 700;
 			color: #ffffff;
 		}
+
 		@media screen and (max-width: 992px) {
 			padding: 10px 0;
 			margin: 10px 0 0 0;
+
 			button {
 				font-size: 18px;
 			}
