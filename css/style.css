@@ -234,7 +234,7 @@ table {
   left: 0;
   position: absolute;
   border-radius: 50%;
-  background: url("/Admin-panel/img/users/user.png") 100%/COVER no-repeat;
+  background: url("/login-panel/img/users/user.png") 100%/COVER no-repeat;
 }
 
 .header__user p {
@@ -353,7 +353,7 @@ table {
   left: 20px;
   position: relative;
   border-radius: 50%;
-  background: url("/Admin-panel/img/users/user.png") 100%/COVER no-repeat;
+  background: url("/login-panel/img/users/user.png") 100%/COVER no-repeat;
 }
 
 .header__user-mobile p {
@@ -786,7 +786,7 @@ table {
 }
 
 .form__body select {
-  background: url("/Admin-panel/img/icons/down-arrow.png") 91%/16px no-repeat #e6e6e6;
+  background: url("/login-panel/img/icons/down-arrow.png") 91%/16px no-repeat #e6e6e6;
 }
 
 .form__close-modal {
@@ -856,7 +856,7 @@ table {
 .form__elements-group-2 fieldset ::-webkit-calendar-picker-indicator {
   -webkit-appearance: none;
   appearance: none;
-  background: url("/Admin-panel/img/icons/calendar.png") 90%/16px no-repeat;
+  background: url("/login-panel/img/icons/calendar.png") 90%/16px no-repeat;
 }
 
 .form__elements-group-2 fieldset input[type=date] {
@@ -1178,7 +1178,7 @@ table {
 }
 
 .table__body tr select {
-  background: url("/Admin-panel/img/icons/down-arrow.png") 95%/18px no-repeat #fff;
+  background: url("/login-panel/img/icons/down-arrow.png") 95%/18px no-repeat #fff;
 }
 
 .table__body tr input::-webkit-input-placeholder {
