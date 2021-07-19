@@ -1125,6 +1125,10 @@ table {
   background-color: #dc3545;
 }
 
+.modal-window__edit-record .form__close-modal {
+  color: #3399cc;
+}
+
 .modal-window__add-record {
   visibility: hidden;
   opacity: 0;
@@ -1141,6 +1145,10 @@ table {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   background: #20c997;
+}
+
+.modal-window__add-record .form__close-modal {
+  color: #20c997;
 }
 
 .form__content {
@@ -1262,7 +1270,6 @@ table {
   height: 30px;
   font-size: 28px;
   font-weight: 700;
-  color: #3399cc;
 }
 
 .form__elements-group {
