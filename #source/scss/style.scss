@@ -86,7 +86,7 @@
 			left: 0;
 			position: absolute;
 			border-radius: 50%;
-			background: url("/Admin-panel/img/users/user.png") 100%/COVER no-repeat;
+			background: url("/login-panel/img/users/user.png") 100%/COVER no-repeat;
 		}
 
 		p {
@@ -193,7 +193,7 @@
 			left: 20px;
 			position: relative;
 			border-radius: 50%;
-			background: url("/Admin-panel/img/users/user.png") 100%/COVER no-repeat;
+			background: url("/login-panel/img/users/user.png") 100%/COVER no-repeat;
 		}
 
 		p {
@@ -611,7 +611,7 @@
 				font-size: 20px;
 			}
 			select {
-				background: url("/Admin-panel/img/icons/down-arrow.png") 95%/18px no-repeat #fff;
+				background: url("/login-panel/img/icons/down-arrow.png") 95%/18px no-repeat #fff;
 			}
 
 			input {
@@ -951,7 +951,7 @@
 			}
 		}
 		select {
-			background: url("/Admin-panel/img/icons/down-arrow.png") 91%/16px no-repeat #e6e6e6;
+			background: url("/login-panel/img/icons/down-arrow.png") 91%/16px no-repeat #e6e6e6;
 		}
 	}
 
@@ -999,7 +999,7 @@
 			::-webkit-calendar-picker-indicator { 
 				-webkit-appearance: none;
 				appearance: none;
-				background: url("/Admin-panel/img/icons/calendar.png") 90%/16px no-repeat;
+				background: url("/login-panel/img/icons/calendar.png") 90%/16px no-repeat;
 			}
 			input[type=date] {
 			
