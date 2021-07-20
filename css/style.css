@@ -629,7 +629,7 @@ table {
           justify-content: center;
 }
 
-.modal-window ::webkit-scrollbar {
+.modal-window::webkit-scrollbar {
   display: none;
 }
 

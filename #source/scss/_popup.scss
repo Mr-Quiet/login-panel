@@ -1,7 +1,7 @@
 .modal-window {
 	overflow-y: scroll;
 
-	::webkit-scrollbar {
+	&::webkit-scrollbar {
 		display: none;
 	}
 
