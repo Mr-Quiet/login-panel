@@ -799,7 +799,7 @@ table {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   right: 10px;
-  background: url("/img/icons/check-circle.svg") 100%/cover no-repeat;
+  background: url("login-panel/img/icons/check-circle.svg") 100%/cover no-repeat;
   width: 25px;
   height: 25px;
 }
@@ -855,7 +855,7 @@ table {
 }
 
 .form__body select {
-  background: url("/img/icons/down-arrow.png") 91%/16px no-repeat #e6e6e6;
+  background: url("login-panel/img/icons/down-arrow.png") 91%/16px no-repeat #e6e6e6;
 }
 
 .form__close-modal {
@@ -942,7 +942,7 @@ table {
 .form__elements-group-2 fieldset ::-webkit-calendar-picker-indicator {
   -webkit-appearance: none;
   appearance: none;
-  background: url("/img/icons/calendar.png") 90%/16px no-repeat;
+  background: url("login-panel/img/icons/calendar.png") 90%/16px no-repeat;
 }
 
 .form__elements-group-2 fieldset input[type=date] {
@@ -1264,7 +1264,7 @@ table {
 }
 
 .table__body tr select {
-  background: url("/img/icons/down-arrow.png") 95%/18px no-repeat #fff;
+  background: url("login-panel/img/icons/down-arrow.png") 95%/18px no-repeat #fff;
 }
 
 .table__body tr input::-webkit-input-placeholder {

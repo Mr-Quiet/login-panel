@@ -177,7 +177,7 @@
 						top: 50%;
 						transform: translateY(-50%);
 						right: 10px;
-						background: url("/img/icons/check-circle.svg") 100%/cover no-repeat;
+						background: url("login-panel/img/icons/check-circle.svg") 100%/cover no-repeat;
 						width: 25px;
 						height: 25px;
 
@@ -227,7 +227,7 @@
 		}
 
 		select {
-			background: url("/img/icons/down-arrow.png") 91%/16px no-repeat #e6e6e6;
+			background: url("login-panel/img/icons/down-arrow.png") 91%/16px no-repeat #e6e6e6;
 		}
 	}
 
@@ -288,7 +288,7 @@
 			::-webkit-calendar-picker-indicator {
 				-webkit-appearance: none;
 				appearance: none;
-				background: url("/img/icons/calendar.png") 90%/16px no-repeat;
+				background: url("login-panel/img/icons/calendar.png") 90%/16px no-repeat;
 			}
 
 			input[type=date] {
