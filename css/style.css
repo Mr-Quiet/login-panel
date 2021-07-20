@@ -691,7 +691,7 @@ table {
   color: #20c997;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-height: 575px) {
   .modal-window {
     -webkit-box-align: start;
         -ms-flex-align: start;
