@@ -767,6 +767,7 @@ table {
 .form__body fieldset input[type="file"] {
   display: none;
   padding: 15px;
+  text-overflow: ellipsis;
 }
 
 @media screen and (max-width: 992px) {
@@ -792,32 +793,29 @@ table {
 }
 
 .form__body fieldset .input-file.active span::after {
-  content: '\2713';
+  content: '';
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   right: 10px;
-  font-size: 22px;
-  font-weight: bold;
-  color: #fff;
+  background: url("/img/icons/check-circle.svg") 100%/cover no-repeat;
+  width: 25px;
+  height: 25px;
 }
 
 @media screen and (max-width: 360px) {
   .form__body fieldset .input-file.active span::after {
-    right: 5px;
-  }
-}
-
-@media screen and (max-width: 340px) {
-  .form__body fieldset .input-file.active span::after {
-    font-size: 18px;
+    width: 20px;
+    height: 20px;
+    right: 7px;
   }
 }
 
 @media screen and (max-width: 992px) {
   .form__body fieldset .input-file {
-    padding: 11.5px;
+    padding: 12.5px 30px 12.5px 12.5px;
+    font-size: 14px;
   }
 }
 
@@ -857,7 +855,7 @@ table {
 }
 
 .form__body select {
-  background: url("img/icons/down-arrow.png") 91%/16px no-repeat #e6e6e6;
+  background: url("/img/icons/down-arrow.png") 91%/16px no-repeat #e6e6e6;
 }
 
 .form__close-modal {
@@ -944,7 +942,7 @@ table {
 .form__elements-group-2 fieldset ::-webkit-calendar-picker-indicator {
   -webkit-appearance: none;
   appearance: none;
-  background: url("img/icons/calendar.png") 90%/16px no-repeat;
+  background: url("/img/icons/calendar.png") 90%/16px no-repeat;
 }
 
 .form__elements-group-2 fieldset input[type=date] {
@@ -1266,7 +1264,7 @@ table {
 }
 
 .table__body tr select {
-  background: url("img/icons/down-arrow.png") 95%/18px no-repeat #fff;
+  background: url("/img/icons/down-arrow.png") 95%/18px no-repeat #fff;
 }
 
 .table__body tr input::-webkit-input-placeholder {
