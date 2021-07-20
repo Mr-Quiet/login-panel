@@ -14,7 +14,6 @@
 			<div class="header__body">
 				<div class="header__row">
 					<div class="header__logo">
-						<img src="" alt="">
 						<img src="/login-panel/img/DUET130_50.png" width="90" alt="">
 						<p>- Адмін панель</p>
 					</div>
@@ -58,14 +57,14 @@
 					<nav class="menu__columns">
 						<ul class="item">
 							<li class="item__row active">
-								<a href="index.html"><span><svg width="25" xmlns="http://www.w3.org/2000/svg"
+								<a href="#"><span><svg width="25" xmlns="http://www.w3.org/2000/svg"
 											viewBox="0 0 480 512">
 											<path
 												d="M477.7 186.1L309.5 18.3c-3.1-3.1-8.2-3.1-11.3 0l-34 33.9c-3.1 3.1-3.1 8.2 0 11.3l11.2 11.1L33 316.5c-38.8 38.7-45.1 102-9.4 143.5 20.6 24 49.5 36 78.4 35.9 26.4 0 52.8-10 72.9-30.1l246.3-245.7 11.2 11.1c3.1 3.1 8.2 3.1 11.3 0l34-33.9c3.1-3 3.1-8.1 0-11.2zM318 256H161l148-147.7 78.5 78.3L318 256z" />
 										</svg></span>NPP</a>
 							</li>
 							<li class="item__row">
-								<a href="import.html"><span><svg width="25" xmlns="http://www.w3.org/2000/svg"
+								<a href="#"><span><svg width="25" xmlns="http://www.w3.org/2000/svg"
 											viewBox="0 0 512 512">
 											<path
 												d="M464 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zM160 448H48c-8.837 0-16-7.163-16-16v-80h128v96zm0-128H32v-96h128v96zm0-128H32V96h128v96zm160 256H192v-96h128v96zm0-128H192v-96h128v96zm0-128H192V96h128v96zm160 160v80c0 8.837-7.163 16-16 16H352v-96h128zm0-32H352v-96h128v96zm0-128H352V96h128v96z" />
@@ -659,10 +658,16 @@
 			<div class="form__body">
 				<p>ID: <span data-record-id>2ly235liv25</span></p>
 				<form method="post" action="#">
-					<fieldset>
-						<legend>Name</legend>
-						<input type="text" name="name" value="Serhii Hushko">
-					</fieldset>
+					<div class="form__elements-file">
+						<fieldset>
+							<legend>Зображення профілю</legend>
+							<label class="input-file"><span>Обрати файл</span><input type="file"></label>
+						</fieldset>
+						<fieldset>
+							<legend>Name</legend>
+							<input type="text" name="name" placeholder="Your name" value="">
+						</fieldset>
+					</div>
 					<div class="form__elements-group">
 						<fieldset>
 							<legend>Science degree</legend>
@@ -722,10 +727,16 @@
 			</div>
 			<div class="form__body">
 				<form method="post" action="#">
-					<fieldset>
-						<legend>Name</legend>
-						<input type="text" name="name" placeholder="Your name" value="">
-					</fieldset>
+					<div class="form__elements-file">
+						<fieldset>
+							<legend>Зображення профілю</legend>
+							<label class="input-file"><span>Обрати файл</span><input type="file"></label>
+						</fieldset>
+						<fieldset>
+							<legend>Name</legend>
+							<input type="text" name="name" placeholder="Your name" value="">
+						</fieldset>
+					</div>
 					<div class="form__elements-group">
 						<fieldset>
 							<legend>Science degree</legend>

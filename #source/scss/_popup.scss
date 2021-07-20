@@ -1,5 +1,11 @@
 .modal-window {
-	padding: 0 15px;
+	overflow-y: scroll;
+
+	::webkit-scrollbar {
+		display: none;
+	}
+
+	padding: 15px 15px;
 	z-index: 2;
 	position: fixed;
 	width: 100%;
@@ -26,11 +32,13 @@
 	}
 
 	&__edit-record {
+
 		opacity: 0;
 		visibility: hidden;
 		transition: all 0.8s ease 0s;
 
 		.form {
+
 			&__header {
 				background: #3399cc;
 			}
@@ -44,13 +52,16 @@
 					background-color: #dc3545;
 				}
 			}
+
 			&__close-modal {
 				color: #3399cc;
-			}	
+			}
 		}
 	}
 
 	&__add-record {
+
+
 		visibility: hidden;
 		opacity: 0;
 		transition: all 0.8s ease 0s;
@@ -66,9 +77,10 @@
 					background: #20c997;
 				}
 			}
+
 			&__close-modal {
 				color: #20c997;
-			}		
+			}
 		}
 	}
 }
@@ -128,6 +140,33 @@
 		fieldset {
 			margin: 5px 0;
 
+			input[type="file"] {
+				display: none;
+				padding: 15px;
+
+				@media screen and (max-width: 992px) {
+					padding: 9px;
+				}
+			}
+
+			.input-file {
+				cursor: pointer;
+				display: block;
+				white-space: nowrap;
+				border-radius: 3px;
+				padding: 16.5px;
+				background: #e6e6e6;
+				font-size: 16px;
+
+				&:active {
+					background: darken(#e6e6e6, 10%);
+				}
+
+				@media screen and (max-width: 992px) {
+					padding: 11.5px;
+				}
+			}
+
 			legend {
 				font-size: 20px;
 				font-weight: 700;
@@ -153,11 +192,12 @@
 			padding: 15px;
 			background: #e6e6e6;
 			font-size: 16px;
-		
+
 			@media screen and (max-width: 992px) {
 				padding: 10px;
 			}
 		}
+
 		select {
 			background: url("/login-panel/img/icons/down-arrow.png") 91%/16px no-repeat #e6e6e6;
 		}
@@ -173,7 +213,19 @@
 		height: 30px;
 		font-size: 28px;
 		font-weight: 700;
-		
+
+	}
+
+	&__elements-file {
+		display: flex;
+		align-items: flex-end;
+		margin: 0 -5px;
+
+		fieldset {
+			padding: 0 5px;
+			flex: 0 1 50%;
+		}
+
 	}
 
 	&__elements-group {
@@ -204,14 +256,17 @@
 		fieldset {
 			padding: 0 5px;
 			flex: 0 1 50%;
-			::-webkit-calendar-picker-indicator { 
+
+			::-webkit-calendar-picker-indicator {
 				-webkit-appearance: none;
 				appearance: none;
 				background: url("/login-panel/img/icons/calendar.png") 90%/16px no-repeat;
 			}
+
 			input[type=date] {
-			
+
 				padding: 13.2px;
+
 				@media screen and (max-width: 992px) {
 					padding: 9px;
 					width: 100%;

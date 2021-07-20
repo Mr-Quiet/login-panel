@@ -607,7 +607,8 @@ table {
 }
 
 .modal-window {
-  padding: 0 15px;
+  overflow-y: scroll;
+  padding: 15px 15px;
   z-index: 2;
   position: fixed;
   width: 100%;
@@ -626,6 +627,10 @@ table {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.modal-window ::webkit-scrollbar {
+  display: none;
 }
 
 .modal-window:target {
@@ -750,6 +755,37 @@ table {
   margin: 5px 0;
 }
 
+.form__body fieldset input[type="file"] {
+  display: none;
+  padding: 15px;
+}
+
+@media screen and (max-width: 992px) {
+  .form__body fieldset input[type="file"] {
+    padding: 9px;
+  }
+}
+
+.form__body fieldset .input-file {
+  cursor: pointer;
+  display: block;
+  white-space: nowrap;
+  border-radius: 3px;
+  padding: 16.5px;
+  background: #e6e6e6;
+  font-size: 16px;
+}
+
+.form__body fieldset .input-file:active {
+  background: #cdcdcd;
+}
+
+@media screen and (max-width: 992px) {
+  .form__body fieldset .input-file {
+    padding: 11.5px;
+  }
+}
+
 .form__body fieldset legend {
   font-size: 20px;
   font-weight: 700;
@@ -805,6 +841,23 @@ table {
   height: 30px;
   font-size: 28px;
   font-weight: 700;
+}
+
+.form__elements-file {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin: 0 -5px;
+}
+
+.form__elements-file fieldset {
+  padding: 0 5px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
 }
 
 .form__elements-group {
