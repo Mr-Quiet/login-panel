@@ -691,7 +691,7 @@ table {
   color: #20c997;
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 375px) {
   .modal-window {
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -798,6 +798,7 @@ table {
           transform: translateY(-50%);
   right: 15px;
   font-size: 22px;
+  color: #fff;
 }
 
 @media screen and (max-width: 360px) {
