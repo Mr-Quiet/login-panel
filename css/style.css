@@ -799,6 +799,7 @@ table {
           transform: translateY(-50%);
   right: 10px;
   font-size: 22px;
+  font-weight: bold;
   color: #fff;
 }
 
