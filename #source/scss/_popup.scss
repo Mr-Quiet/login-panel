@@ -1,6 +1,6 @@
 .modal-window {
 
-	padding: 15px 15px;
+	padding: 15px;
 	z-index: 2;
 	position: fixed;
 	width: 100%;
@@ -12,7 +12,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	overflow-y: scroll;
+	overflow-y: auto;
 
 	&::webkit-scrollbar {
 		display: none;
@@ -83,10 +83,13 @@
 			}
 		}
 	}
+	@media screen and (max-width: 460px) {
+		align-items: flex-start;
+	}
 }
 
 .form {
-
+	
 	&__content {
 		max-width: 471px;
 		overflow: hidden;
@@ -97,6 +100,7 @@
 		opacity: 0;
 		// transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
 		transform: translate(0px, -100%);
+
 	}
 
 	&__header {
@@ -148,7 +152,7 @@
 					padding: 9px;
 				}
 			}
-
+			
 			.input-file {
 				cursor: pointer;
 				display: block;
@@ -157,9 +161,26 @@
 				padding: 16.5px;
 				background: #e6e6e6;
 				font-size: 16px;
-
-				&:active {
-					background: darken(#e6e6e6, 10%);
+				
+				&.active {
+					background: green;
+					color:white;
+					position: relative;
+					span::after {
+						content: '\2714';
+						position: absolute;
+						top: 50%;
+						transform: translateY(-50%);
+						right: 15px;
+						font-size: 22px;
+						@media screen and (max-width: 360px) {
+							// font-size: 16px;
+							right: 10px;
+						}
+						@media screen and (max-width: 340px) {
+							display: none;
+						}
+					}
 				}
 
 				@media screen and (max-width: 992px) {
@@ -199,7 +220,7 @@
 		}
 
 		select {
-			background: url("/login-panel/img/icons/down-arrow.png") 91%/16px no-repeat #e6e6e6;
+			background: url("img/icons/down-arrow.png") 91%/16px no-repeat #e6e6e6;
 		}
 	}
 
@@ -260,7 +281,7 @@
 			::-webkit-calendar-picker-indicator {
 				-webkit-appearance: none;
 				appearance: none;
-				background: url("/login-panel/img/icons/calendar.png") 90%/16px no-repeat;
+				background: url("img/icons/calendar.png") 90%/16px no-repeat;
 			}
 
 			input[type=date] {

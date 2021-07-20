@@ -234,7 +234,7 @@ table {
   left: 0;
   position: absolute;
   border-radius: 50%;
-  background: url("/login-panel/img/users/user.png") 100%/COVER no-repeat;
+  background: url("img/users/user.png") 100%/COVER no-repeat;
 }
 
 .header__user p {
@@ -353,7 +353,7 @@ table {
   left: 20px;
   position: relative;
   border-radius: 50%;
-  background: url("/login-panel/img/users/user.png") 100%/COVER no-repeat;
+  background: url("img/users/user.png") 100%/COVER no-repeat;
 }
 
 .header__user-mobile p {
@@ -607,7 +607,7 @@ table {
 }
 
 .modal-window {
-  padding: 15px 15px;
+  padding: 15px;
   z-index: 2;
   position: fixed;
   width: 100%;
@@ -626,7 +626,7 @@ table {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .modal-window::webkit-scrollbar {
@@ -689,6 +689,14 @@ table {
 
 .modal-window__add-record .form__close-modal {
   color: #20c997;
+}
+
+@media screen and (max-width: 460px) {
+  .modal-window {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
 }
 
 .form__content {
@@ -776,8 +784,32 @@ table {
   font-size: 16px;
 }
 
-.form__body fieldset .input-file:active {
-  background: #cdcdcd;
+.form__body fieldset .input-file.active {
+  background: green;
+  color: white;
+  position: relative;
+}
+
+.form__body fieldset .input-file.active span::after {
+  content: '\2714';
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 15px;
+  font-size: 22px;
+}
+
+@media screen and (max-width: 360px) {
+  .form__body fieldset .input-file.active span::after {
+    right: 10px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .form__body fieldset .input-file.active span::after {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -822,7 +854,7 @@ table {
 }
 
 .form__body select {
-  background: url("/login-panel/img/icons/down-arrow.png") 91%/16px no-repeat #e6e6e6;
+  background: url("img/icons/down-arrow.png") 91%/16px no-repeat #e6e6e6;
 }
 
 .form__close-modal {
@@ -909,7 +941,7 @@ table {
 .form__elements-group-2 fieldset ::-webkit-calendar-picker-indicator {
   -webkit-appearance: none;
   appearance: none;
-  background: url("/login-panel/img/icons/calendar.png") 90%/16px no-repeat;
+  background: url("img/icons/calendar.png") 90%/16px no-repeat;
 }
 
 .form__elements-group-2 fieldset input[type=date] {
@@ -1231,7 +1263,7 @@ table {
 }
 
 .table__body tr select {
-  background: url("/login-panel/img/icons/down-arrow.png") 95%/18px no-repeat #fff;
+  background: url("img/icons/down-arrow.png") 95%/18px no-repeat #fff;
 }
 
 .table__body tr input::-webkit-input-placeholder {
