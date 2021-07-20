@@ -792,25 +792,25 @@ table {
 }
 
 .form__body fieldset .input-file.active span::after {
-  content: '\2714';
+  content: '\2713';
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  right: 15px;
+  right: 10px;
   font-size: 22px;
   color: #fff;
 }
 
 @media screen and (max-width: 360px) {
   .form__body fieldset .input-file.active span::after {
-    right: 10px;
+    right: 5px;
   }
 }
 
 @media screen and (max-width: 340px) {
   .form__body fieldset .input-file.active span::after {
-    display: none;
+    font-size: 18px;
   }
 }
 
