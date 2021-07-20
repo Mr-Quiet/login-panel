@@ -1,9 +1,4 @@
 .modal-window {
-	overflow-y: scroll;
-
-	&::webkit-scrollbar {
-		display: none;
-	}
 
 	padding: 15px 15px;
 	z-index: 2;
@@ -17,6 +12,11 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	overflow-y: scroll;
+
+	&::webkit-scrollbar {
+		display: none;
+	}
 
 	&:target {
 		visibility: visible;
